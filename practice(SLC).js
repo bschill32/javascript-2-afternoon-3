@@ -29,7 +29,8 @@
 
 function first(arr, cb){
   cb(arr[0])
-}// Code Here 
+}
+// Code Here 
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -50,8 +51,9 @@ first(names, function(firstName){
 */
 
 function last(arr, cb){
-  cb(arr[arr.length -1])
-}//Code Here
+  cb(arr[arr.length-1])
+}
+//Code Here
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -70,7 +72,7 @@ last(names, function(lastName){
 */
 
 function multiply(num1, num2, cb){
-  cb(num1 * num2)
+  cb(num1*num2)
 }//Code Here
 
 // Do not edit the code below.
@@ -91,10 +93,10 @@ multiply(4, 3, function(answer){
 */
 
 function contains(arr, name, cb){
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] === name){
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i]===name){
       cb(true)
-    }else{
+    } else {
       cb(false)
     }
   }
@@ -119,16 +121,16 @@ contains(names, 'Colt', function(result){
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
 */
 
-
-function uniq(arr, cb){
-  let newArr = []
-  for(let i = 0; i < arr.length; i++){
-    if(newArr.indexOf(arr[i])===-1){
-      newArr.push(arr[i])
+function uniq(array, cb){
+  var arr = []
+  for (var i = 0; i < array.length; i++) {
+    if(arr.indexOf(array[i])===-1){
+      arr.push(array[i])
     }
-    cb(newArr)
   }
-}//Code Here
+  cb(arr);
+}
+//Code Here
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -145,9 +147,9 @@ uniq(names, function(uniqArr){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-function each(arr, cb){
-  for(let i = 0; i < arr.length; i++){
-    cb(arr[i], i)
+function each(array, cb){
+for (var i = 0; i < array.length; i++) {
+  cb(array[i], i)
   }
 }//Code Here 
 
@@ -167,9 +169,8 @@ each(names, function(item, indice){
 */
 
 function getUserById(users, id, cb){
-  for(let i = 0; i < users.length; i++){
-    if(users[i] === id){
-    }
+  for (var i = 0; i < users.length; i++) {
+    if(users[i].id === id){}
     cb(users[i])
   }
 }// Code here
